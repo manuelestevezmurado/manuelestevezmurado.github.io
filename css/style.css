@@ -1,0 +1,194 @@
+/* WEB PALETTE:  */
+/* TEXT PALETTE:  */
+
+@import "header.css";
+@import "footer.css";
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    color: white;                       /* TODO: EDITAR */
+    background-color: #14110f;          /* TODO: EDITAR */
+}
+
+/* 5VH DUE TO FOOTER AND 25PX OF FOOTER MARGIN-TOP */
+.header-and-content{
+    min-height: calc(100vh - 5vh - 25px);
+}
+
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 1.75rem;
+    letter-spacing: 3px;
+}
+h3 {
+    font-size: 1rem;
+}
+p {
+    font-size: 0.9rem;
+}
+
+a {
+    color: white;                       /* TODO: EDITAR */
+    text-decoration: none;
+    transition: 0.1s ease-in-out;
+}
+a:hover {
+    color: lightgrey;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    width: 100%;
+    background-color: white;
+}
+.vertical-hr {
+    width: 1px;
+    height: 100%;
+    background-color: white;
+    border: none;
+    margin-top: 0;
+    padding-top: 0;
+}
+.hr-container{
+    height: 1vh;
+    padding-top: 1vh;
+}
+.vertical-hr-container{
+    width: 1%;
+}
+
+.body-section {
+    width: 100%;
+}
+
+.body-section-padding {
+    width: 100%;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+.center{
+    text-align: center;
+}
+
+.left{
+    padding-right: 1rem;
+}
+
+.right{
+    padding-left: 1rem;
+}
+
+.margin-top{
+    margin-top: 25px;
+}
+
+.margin-bottom{
+    margin-bottom: 25px;
+}
+
+.container-49_5{
+    width: 49.5%;
+}
+
+.display-on-big{
+    display: block;
+}
+
+.display-on-small{
+    display: none;
+}
+
+button{
+    border: 1px solid white;           /* TODO: EDITAR */
+    border-radius: 5px;
+    background: transparent;
+    color: white;                       /* TODO: EDITAR */
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 7px;
+    transition: 0.3s ease;
+}
+
+button:hover{
+    cursor: pointer;
+    background: white;
+    color: #14110f;                       /* TODO: EDITAR */
+    padding: 7px;
+}
+
+.no-select{
+    user-select: none;
+}
+
+/* TABLETS */
+@media screen and (max-width: 1100px) and (min-width: 851px){
+
+    .left{
+        padding-right: 0;
+    }
+
+    .right{
+        padding-left: 0;
+    }
+
+    .body-section-padding {
+        padding: 0 25px;
+    }
+
+    .container-49_5{
+        width: 100%;
+    }
+
+    .display-on-big{
+        display: none;
+    }
+
+    .display-on-small{
+        display: block;
+    }
+
+}
+
+/* SMARTPHONES */
+@media screen and (max-width: 850px) {
+
+    .left{
+        padding-right: 0;
+    }
+
+    .right{
+        padding-left: 0;
+    }
+
+    .body-section-padding {
+        padding: 0 25px;
+    }
+
+
+    .container-49_5{
+        width: 100%;
+    }
+
+    .display-on-big{
+        display: none;
+    }
+
+
+    .display-on-small{
+        display: block;
+    }
+
+}

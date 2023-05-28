@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!-- TODO: EDITAR -->
+<html lang="es">
+
+<!-- TODO: EDITAR -->
+<head>
+    <!-- TODO: EDITAR -->
+    <title>MANUEL ESTEVEZ MURADO</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Joaquín Solla Vázquez, Manuel Estévez Murado">
+    <!-- TODO: EDITAR -->
+    <meta name="description" content="Manuel Estévez Murado">
+    <!-- TODO: EDITAR -->
+    <meta name="keywords" content="...">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" href="/assets/favicon-light.ico" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="/assets/favicon-dark.ico" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="header-and-content">
+        <div id="navigation" style="display: none">
+            <script src="scripts/navigation.js"></script>
+            <div></div>
+            <div>
+                <p><a href="index.html#galeria">GALERÍA</a></p>
+                <p><a href="libro.html">LIBRO</a></p>
+                <p><a href="informacion.html">INFORMACIÓN</a></p>
+                <p><a href="ubicaciones.html">UBICACIONES</a></p>
+                <p><a href="agradecimientos.html">AGRADECIMIENTOS</a></p>
+            </div>
+            <div></div>
+        </div>
+
+        <div class="index-home body-section">
+            <div class="header-container">
+                <header class="header-expanded body-section">
+                    <div class="header-title">
+                        <a href="index.html">
+                            <h1>Título del TFG aquí</h1>
+                            <p>Manuel Estévez Murado</p>
+                        </a>
+                    </div>
+                    <div class="header-links">
+                        <p>
+                            <a href="index.html#galeria">GALERÍA</a>
+                            &nbsp;
+                            <a href="libro.html">LIBRO</a>
+                            &nbsp;
+                            <a href="informacion.html">INFORMACIÓN</a>
+                            &nbsp;
+                            <a href="ubicaciones.html">UBICACIONES</a>
+                            &nbsp;
+                            <a href="agradecimientos.html">AGRADECIMIENTOS</a>
+                        </p>
+                    </div>
+                </header>
+                <header class="header-collapsed body-section">
+                    <div class="header-title">
+                        <a href="index.html">
+                            <h1>Título del TFG aquí</h1>
+                            <p>Manuel Estévez Murado</p>
+                        </a>
+                    </div>
+                    <div>
+                        <div class="navigation-button" onclick="toggleNavigation(this)">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div></div>
+            <div class="index-home-swipe-button">
+                <script>
+                    function scrollToIntro(){
+                        const targetElement = document.querySelector('#galeria');
+                        const targetPosition = targetElement.offsetTop;
+                        const startPosition = window.pageYOffset;
+                        const distance = targetPosition - startPosition;
+
+                        const duration = 400;
+                        let start = null;
+                        window.requestAnimationFrame(step);
+
+                        function step(timestamp) {
+                            if (!start) start = timestamp;
+                            const progress = timestamp - start;
+                            window.scrollTo(0, easeInOutQuad(progress, startPosition, distance, duration));
+                            if (progress < duration) window.requestAnimationFrame(step);
+                        }
+
+                        // Easing function para una transición suave
+                        function easeInOutQuad(t, b, c, d) {
+                            t /= d/2;
+                            if (t < 1) return c/2*t*t + b;
+                            t--;
+                            return -c/2 * (t*(t-2) - 1) + b;
+                        }
+                    }
+                </script>
+                <a style="cursor: pointer" onclick="scrollToIntro()">
+                    <p style="user-select: none; font-size: 1.25rem; font-style: italic">Desliza para ver la galería<br>
+                        <i class="fa fa-angle-double-down" style="animation: bounce 2.5s infinite;"></i>
+                    </p>
+                </a>
+            </div>
+        </div>
+
+        <div id="galeria" class="index-galleries body-section-padding">
+
+            <div class="index-galleries-wrap">
+
+                <div class="index-galleries-section">
+                    <a class="index-galleries-section-link" href="galeria/aerea.html">
+                        <div class="index-galleries-section-image" style="background-image: url('assets/aerea/DJI_0174.webp')">
+                        </div>
+                        <p class="index-galleries-section-text no-select">
+                            Aérea
+                        </p>
+                    </a>
+                </div>
+                <div class="index-galleries-section">
+                    <a class="index-galleries-section-link" href="galeria/bodegones.html">
+                        <div class="index-galleries-section-image" style="background-image: url('assets/bodegones/DSCF9097.webp')">
+                        </div>
+                        <p class="index-galleries-section-text no-select">
+                            Bodegones
+                        </p>
+                    </a>
+                </div>
+                <div class="index-galleries-section">
+                    <a class="index-galleries-section-link" href="galeria/geometria.html">
+                        <div class="index-galleries-section-image" style="background-image: url('assets/geometria/DSCF0415-HDR.webp')">
+                        </div>
+                        <p class="index-galleries-section-text no-select">
+                            Geometría
+                        </p>
+                    </a>
+                </div>
+                <div class="index-galleries-section">
+                    <a class="index-galleries-section-link" href="galeria/graffitis.html">
+                        <div class="index-galleries-section-image" style="background-image: url('assets/graffitis/DSCF0408.webp')">
+                        </div>
+                        <p class="index-galleries-section-text no-select">
+                            Graffitis
+                        </p>
+                    </a>
+                </div>
+                <div class="index-galleries-section">
+                    <a class="index-galleries-section-link" href="galeria/grandes_construcciones.html">
+                        <div class="index-galleries-section-image" style="background-image: url('assets/grandes_construcciones/DSCF1141.webp')">
+                        </div>
+                        <p class="index-galleries-section-text no-select">
+                            Grandes construcciones
+                        </p>
+                    </a>
+                </div>
+                <div class="index-galleries-section">
+                    <a class="index-galleries-section-link" href="galeria/interiores.html">
+                        <div class="index-galleries-section-image" style="background-image: url('assets/interiores/DSCF0311-HDR.webp')">
+                        </div>
+                        <p class="index-galleries-section-text no-select">
+                            Interiores
+                        </p>
+                    </a>
+                </div>
+                <div class="index-galleries-section">
+                    <a class="index-galleries-section-link" href="galeria/naturaleza.html">
+                        <div class="index-galleries-section-image" style="background-image: url('assets/naturaleza/DSCF3593.webp')">
+                        </div>
+                        <p class="index-galleries-section-text no-select">
+                            Naturaleza
+                        </p>
+                    </a>
+                </div>
+                <div class="index-galleries-section">
+                    <a class="index-galleries-section-link" href="galeria/texturas.html">
+                        <div class="index-galleries-section-image" style="background-image: url('assets/texturas/DSCF3438.webp')">
+                        </div>
+                        <p class="index-galleries-section-text no-select">
+                            Texturas
+                        </p>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>
+            &copy;&nbsp;MANUEL ESTÉVEZ MURADO 2023
+        </p>
+    </footer>
+
+</body>
+</html>

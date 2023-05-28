@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="09783d69-630a-4732-928d-786c74a963e3" name="Changes" comment="Working on galleries">
+      <change beforePath="$PROJECT_DIR$/ubicaciones.html" beforeDir="false" afterPath="$PROJECT_DIR$/ubicaciones.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2PIDL99E20UK1BwKM9mWUqe4VRA" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Coding/manuelestevezweb/css&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Coding\manuelestevezweb\css" />
+      <recent name="C:\Coding\manuelestevezweb\galeria" />
+      <recent name="C:\Coding\manuelestevezweb\scripts" />
+      <recent name="C:\Coding\manuelestevezweb\assets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Coding\manuelestevezweb" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="09783d69-630a-4732-928d-786c74a963e3" name="Changes" comment="" />
+      <created>1683135643570</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683135643570</updated>
+      <workItem from="1683135644833" duration="1868000" />
+      <workItem from="1683153337302" duration="6586000" />
+      <workItem from="1683195284443" duration="3011000" />
+      <workItem from="1683229091082" duration="6000" />
+      <workItem from="1683283912532" duration="387000" />
+      <workItem from="1684942670334" duration="3720000" />
+      <workItem from="1684960078379" duration="105000" />
+      <workItem from="1685042534973" duration="7687000" />
+      <workItem from="1685269773925" duration="779000" />
+    </task>
+    <task id="LOCAL-00001" summary="First commit">
+      <created>1683135893591</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683135893591</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added .webp photos">
+      <created>1684879036975</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684879036975</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added all blank files">
+      <created>1684881228289</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684881228289</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Removed .idea">
+      <created>1684881314574</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684881314574</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Updated libro.html">
+      <created>1684945537962</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684945537962</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added footers">
+      <created>1684945667079</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1684945667079</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added footers">
+      <created>1684945837803</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1684945837803</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added style">
+      <created>1685048166347</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1685048166347</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added style">
+      <created>1685048441749</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1685048441749</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Working on galleries">
+      <created>1685052626173</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1685052626173</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First commit" />
+    <MESSAGE value="Added .webp photos" />
+    <MESSAGE value="Added all blank files" />
+    <MESSAGE value="Removed .idea" />
+    <MESSAGE value="Updated libro.html" />
+    <MESSAGE value="Added footers" />
+    <MESSAGE value="Added style" />
+    <MESSAGE value="Working on galleries" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working on galleries" />
+  </component>
+</project>

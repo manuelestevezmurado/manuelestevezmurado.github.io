@@ -1,0 +1,128 @@
+.header-expanded {
+    margin-top: 50px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    position: relative;
+    z-index: 900;
+}
+.header-expanded h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.header-expanded p {
+    font-size: 1rem;
+}
+
+.header-collapsed {
+    display: none;
+    position: relative;
+    z-index: 900;
+}
+.header-collapsed h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.header-collapsed p {
+    font-size: 1rem;
+}
+
+
+/* NAVIGATION BUTTON */
+.navigation-button {
+    position: relative;
+    pointer-events: auto;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 0.75rem;
+    z-index: 900;
+}
+.bar1, .bar2, .bar3 {
+    pointer-events: auto;
+    width: 2.35rem;
+    height: 0.1rem;
+    background-color: white;
+    margin: 0.65rem 0;
+    transition: 0.4s;
+}
+.change .bar1 {
+    transform: translate(0, 0.75rem) rotate(-45deg);
+}
+.change .bar2 {
+    opacity: 0;
+}
+.change .bar3 {
+    transform: translate(0, -0.75rem) rotate(45deg);
+}
+
+.header-title{
+    z-index: 900;
+    padding: 0 25px 0 0;
+    box-sizing: border-box;
+}
+
+/* NAVIGATION LIST */
+#navigation {
+    z-index: 500;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+#navigation p {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+.header-container {
+    width: 100%;
+    padding: 0 50px;
+    box-sizing: border-box;
+    color: white;                 /* TODO: EDITAR */
+}
+
+/* TABLETS */
+@media screen and (max-width: 1100px) and (min-width: 851px){
+
+    .header-expanded {
+        display: none;
+    }
+
+    .header-collapsed {
+        display: flex;
+        margin-top: 25px;
+        align-items: start;
+        justify-content: space-between;
+    }
+
+    .header-container {
+        padding: 0 25px;
+    }
+
+}
+
+/* SMARTPHONES */
+@media screen and (max-width: 850px) {
+
+    .header-expanded {
+        display: none;
+    }
+
+    .header-collapsed {
+        display: flex;
+        margin-top: 25px;
+        align-items: start;
+        justify-content: space-between;
+    }
+
+    .header-container {
+        padding: 0 25px;
+    }
+
+}

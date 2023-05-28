@@ -1,0 +1,37 @@
+.map-and-explanation{
+    display: flex;
+}
+
+.map{
+    height: 72.5vh;
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+}
+
+
+/* TABLETS */
+@media screen and (max-width: 1100px) and (min-width: 851px){
+
+    .map-and-explanation{
+        display: block;
+    }
+
+    .map{
+        height: 65vh;
+    }
+
+}
+
+/* SMARTPHONES */
+@media screen and (max-width: 850px) {
+
+    .map-and-explanation{
+        display: block;
+    }
+
+    .map{
+        height: 65vh;
+    }
+
+}
