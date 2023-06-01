@@ -84,35 +84,58 @@
       </div>
 
       <script>
-        const mainRoute = "../assets/original/aerea/";
+        const originalRoute = "../assets/original/aerea/";
+        const thumbnailRoute = "../assets/thumbnail/aerea/";
 
-        let images = [
-          mainRoute + "DJI_0078.webp",
-          mainRoute + "DJI_0098.webp",
-          mainRoute + "DJI_0108.webp",
-          mainRoute + "DJI_0123.webp",
-          mainRoute + "DJI_0127.webp",
-          mainRoute + "DJI_0129.webp",
-          mainRoute + "DJI_0160.webp",
-          mainRoute + "DJI_0168.webp",
-          mainRoute + "DJI_0169.webp",
-          mainRoute + "DJI_0173.webp",
-          mainRoute + "DJI_0174.webp",
-          mainRoute + "DJI_0177.webp",
-          mainRoute + "DJI_0178.webp",
-          mainRoute + "DJI_0179.webp",
-          mainRoute + "DJI_0184.webp",
-          mainRoute + "DJI_0185.webp",
-          mainRoute + "DJI_0188.webp",
-          mainRoute + "DJI_0196.webp",
-          mainRoute + "DJI_0199.webp",
+        let originalImages = [
+          originalRoute + "DJI_0078.webp",
+          originalRoute + "DJI_0098.webp",
+          originalRoute + "DJI_0108.webp",
+          originalRoute + "DJI_0123.webp",
+          originalRoute + "DJI_0127.webp",
+          originalRoute + "DJI_0129.webp",
+          originalRoute + "DJI_0160.webp",
+          originalRoute + "DJI_0168.webp",
+          originalRoute + "DJI_0169.webp",
+          originalRoute + "DJI_0173.webp",
+          originalRoute + "DJI_0174.webp",
+          originalRoute + "DJI_0177.webp",
+          originalRoute + "DJI_0178.webp",
+          originalRoute + "DJI_0179.webp",
+          originalRoute + "DJI_0184.webp",
+          originalRoute + "DJI_0185.webp",
+          originalRoute + "DJI_0188.webp",
+          originalRoute + "DJI_0196.webp",
+          originalRoute + "DJI_0199.webp",
+        ];
+
+        let thumbnailImages = [
+          thumbnailRoute + "DJI_0078.webp",
+          thumbnailRoute + "DJI_0098.webp",
+          thumbnailRoute + "DJI_0108.webp",
+          thumbnailRoute + "DJI_0123.webp",
+          thumbnailRoute + "DJI_0127.webp",
+          thumbnailRoute + "DJI_0129.webp",
+          thumbnailRoute + "DJI_0160.webp",
+          thumbnailRoute + "DJI_0168.webp",
+          thumbnailRoute + "DJI_0169.webp",
+          thumbnailRoute + "DJI_0173.webp",
+          thumbnailRoute + "DJI_0174.webp",
+          thumbnailRoute + "DJI_0177.webp",
+          thumbnailRoute + "DJI_0178.webp",
+          thumbnailRoute + "DJI_0179.webp",
+          thumbnailRoute + "DJI_0184.webp",
+          thumbnailRoute + "DJI_0185.webp",
+          thumbnailRoute + "DJI_0188.webp",
+          thumbnailRoute + "DJI_0196.webp",
+          thumbnailRoute + "DJI_0199.webp",
         ];
 
         const galleryWrap = document.getElementById("gallery-wrap");
 
-        for (let i = 0; i < images.length; i++) {
+        for (let i = 0; i < thumbnailImages.length; i++) {
           let img = document.createElement("img");
-          img.dataset.src = images[i];
+          img.dataset.src = thumbnailImages[i];
           img.className = "gallery-wrap-photo";
           img.alt = "";
           img.loading = "lazy";
@@ -123,7 +146,7 @@
               let modalImg = document.getElementById("modalImage");
               let captionText = document.getElementById("caption");
               modal.style.display = "block";
-              modalImg.src = images[index];
+              modalImg.src = originalImages[index];
               captionText.innerHTML = img.alt;
             };
           })(i);
