@@ -21,6 +21,12 @@
     transform: scale(1.025);
 }
 
+.next-prev-container{
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
 /* TABLETS */
 @media screen and (max-width: 1100px) and (min-width: 851px){
 

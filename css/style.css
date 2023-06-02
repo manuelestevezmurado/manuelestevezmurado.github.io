@@ -130,6 +130,15 @@ button:hover{
     padding: 7px;
 }
 
+.disabled{
+    opacity: 0;
+    cursor: initial;
+}
+
+.disabled:hover{
+    cursor: initial;
+}
+
 .no-select{
     user-select: none;
 }
