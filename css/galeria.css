@@ -1,3 +1,5 @@
+@import "modal.css";
+
 .gallery-wrap{
     width: 100%;
     display: flex;
@@ -11,14 +13,12 @@
     width: 33%;
     flex: 0 0 33%;
     box-sizing: border-box;
-
+    transition: transform 0.3s ease;
+    user-select: none;
 }
 
 .gallery-wrap-photo:hover {
-
-
-
-
+    transform: scale(1.025);
 }
 
 /* TABLETS */

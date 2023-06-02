@@ -24,6 +24,12 @@
 
 <body>
 
+<script>
+  document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+  });
+</script>
+
 <div class="header-and-content">
   <div id="navigation" style="display: none">
     <script src="../scripts/navigation.js"></script>
@@ -78,11 +84,111 @@
 
   <div class="body-section-padding margin-top">
 
+    <h1 style="text-align: center; margin: 30px 0 30px 0">Bodegones</h1>
 
+    <div id="gallery-wrap" class="gallery-wrap"></div>
+    <div id="modal" class="modal">
+      <span class="close" onclick="document.getElementById('modal').style.display='none'">&#10005;</span>
+      <img class="modal-content" id="modalImage" alt="" src="" loading="eager">
+      <div id="caption"></div>
+    </div>
 
+    <script>
+      const originalRoute = "../assets/original/bodegones/";
+      const thumbnailRoute = "../assets/thumbnail/bodegones/";
 
+      let originalImages = [
+        originalRoute + "DSCF0015.webp",
+        originalRoute + "DSCF0814.webp",
+        originalRoute + "DSCF1204.webp",
+        originalRoute + "DSCF1220.webp",
+        originalRoute + "DSCF1238.webp",
+        originalRoute + "DSCF1240.webp",
+        originalRoute + "DSCF1288.webp",
+        originalRoute + "DSCF3148.webp",
+        originalRoute + "DSCF3155.webp",
+        originalRoute + "DSCF3201.webp",
+        originalRoute + "DSCF3393.webp",
+        originalRoute + "DSCF3407.webp",
+        originalRoute + "DSCF3437.webp",
+        originalRoute + "DSCF3441.webp",
+        originalRoute + "DSCF3580.webp",
+        originalRoute + "DSCF3582.webp",
+        originalRoute + "DSCF9097.webp",
+        originalRoute + "DSCF9458-Edit.webp",
+        originalRoute + "DSCF9466.webp",
+        originalRoute + "DSCF9479.webp",
+        originalRoute + "DSCF9496-HDR.webp",
+      ];
+
+      let thumbnailImages = [
+        thumbnailRoute + "DSCF0015.webp",
+        thumbnailRoute + "DSCF0814.webp",
+        thumbnailRoute + "DSCF1204.webp",
+        thumbnailRoute + "DSCF1220.webp",
+        thumbnailRoute + "DSCF1238.webp",
+        thumbnailRoute + "DSCF1240.webp",
+        thumbnailRoute + "DSCF1288.webp",
+        thumbnailRoute + "DSCF3148.webp",
+        thumbnailRoute + "DSCF3155.webp",
+        thumbnailRoute + "DSCF3201.webp",
+        thumbnailRoute + "DSCF3393.webp",
+        thumbnailRoute + "DSCF3407.webp",
+        thumbnailRoute + "DSCF3437.webp",
+        thumbnailRoute + "DSCF3441.webp",
+        thumbnailRoute + "DSCF3580.webp",
+        thumbnailRoute + "DSCF3582.webp",
+        thumbnailRoute + "DSCF9097.webp",
+        thumbnailRoute + "DSCF9458-Edit.webp",
+        thumbnailRoute + "DSCF9466.webp",
+        thumbnailRoute + "DSCF9479.webp",
+        thumbnailRoute + "DSCF9496-HDR.webp",
+      ];
+
+      const galleryWrap = document.getElementById("gallery-wrap");
+
+      for (let i = 0; i < thumbnailImages.length; i++) {
+        let img = document.createElement("img");
+        img.dataset.src = thumbnailImages[i];
+        img.className = "gallery-wrap-photo";
+        img.alt = "";
+        img.loading = "lazy";
+
+        img.onclick = (function(index) {
+          return function() {
+            let modal = document.getElementById("modal");
+            let modalImg = document.getElementById("modalImage");
+            let captionText = document.getElementById("caption");
+            modal.style.display = "block";
+            modalImg.src = originalImages[index];
+            captionText.innerHTML = img.alt;
+          };
+        })(i);
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const lazyImage = entry.target;
+              lazyImage.src = lazyImage.dataset.src;
+              lazyImage.removeAttribute("data-src");
+              observer.unobserve(lazyImage);
+            }
+          });
+        });
+
+        galleryWrap.appendChild(img);
+        observer.observe(img);
+      }
+
+      const modal = document.getElementById("modal");
+      let span = document.getElementsByClassName("close")[0];
+      span.onclick = function() {
+        modal.style.display = "none";
+      };
+    </script>
 
   </div>
+
 </div>
 
 <footer>

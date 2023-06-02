@@ -17,13 +17,18 @@
 
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/galeria.css">
-  <link rel="stylesheet" href="../css/modal.css">
   <link rel="icon" href="/assets/favicon-light.ico" media="(prefers-color-scheme: light)">
   <link rel="icon" href="/assets/favicon-dark.ico" media="(prefers-color-scheme: dark)">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+
+  <script>
+    document.addEventListener("contextmenu", function(e) {
+      e.preventDefault();
+    });
+  </script>
 
   <div class="header-and-content">
     <div id="navigation" style="display: none">
@@ -78,6 +83,8 @@
     </div>
 
     <div class="body-section-padding margin-top">
+
+      <h1 style="text-align: center; margin: 30px 0 30px 0">Aérea</h1>
 
       <div id="gallery-wrap" class="gallery-wrap"></div>
       <div id="modal" class="modal">
@@ -177,6 +184,7 @@
       </script>
 
     </div>
+
   </div>
 
   <footer>
