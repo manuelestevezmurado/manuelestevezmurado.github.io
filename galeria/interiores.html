@@ -84,7 +84,7 @@
 
   <div class="body-section-padding margin-top">
 
-    <h1 style="text-align: center; margin: 30px 0 30px 0">Aérea</h1>
+    <h1 style="text-align: center; margin: 30px 0 30px 0">Interiores</h1>
 
     <div id="gallery-wrap" class="gallery-wrap"></div>
     <div id="modal" class="modal">
@@ -94,51 +94,66 @@
     </div>
 
     <script>
-      const originalRoute = "../assets/original/aerea/";
-      const thumbnailRoute = "../assets/thumbnail/aerea/";
+      const originalRoute = "../assets/original/interiores/";
+      const thumbnailRoute = "../assets/thumbnail/interiores/";
 
       let originalImages = [
-        originalRoute + "DJI_0078.webp",
-        originalRoute + "DJI_0098.webp",
-        originalRoute + "DJI_0108.webp",
-        originalRoute + "DJI_0123.webp",
-        originalRoute + "DJI_0127.webp",
-        originalRoute + "DJI_0129.webp",
-        originalRoute + "DJI_0160.webp",
-        originalRoute + "DJI_0168.webp",
-        originalRoute + "DJI_0169.webp",
-        originalRoute + "DJI_0173.webp",
-        originalRoute + "DJI_0174.webp",
-        originalRoute + "DJI_0177.webp",
-        originalRoute + "DJI_0178.webp",
-        originalRoute + "DJI_0179.webp",
-        originalRoute + "DJI_0184.webp",
-        originalRoute + "DJI_0185.webp",
-        originalRoute + "DJI_0188.webp",
-        originalRoute + "DJI_0196.webp",
-        originalRoute + "DJI_0199.webp",
+        originalRoute + "DSCF0311-HDR.webp",
+        originalRoute + "DSCF0525.webp",
+        originalRoute + "DSCF0531.webp",
+        originalRoute + "DSCF0679.webp",
+        originalRoute + "DSCF0758.webp",
+        originalRoute + "DSCF0765.webp",
+        originalRoute + "DSCF0785.webp",
+        originalRoute + "DSCF1082.webp",
+        originalRoute + "DSCF1087.webp",
+        originalRoute + "DSCF1102.webp",
+        originalRoute + "DSCF1104.webp",
+        originalRoute + "DSCF1191.webp",
+        originalRoute + "DSCF1243.webp",
+        originalRoute + "DSCF1383.webp",
+        originalRoute + "DSCF1386.webp",
+        originalRoute + "DSCF3134.webp",
+        originalRoute + "DSCF3337.webp",
+        originalRoute + "DSCF3342.webp",
+        originalRoute + "DSCF3432.webp",
+        originalRoute + "DSCF3467.webp",
+        originalRoute + "DSCF3504.webp",
+        originalRoute + "DSCF3536.webp",
+        originalRoute + "DSCF3547-HDR.webp",
+        originalRoute + "DSCF3548.webp",
+        originalRoute + "DSCF9397.webp",
+        originalRoute + "DSCF9506-HDR.webp",
       ];
 
       let thumbnailImages = [
-        thumbnailRoute + "DJI_0078.webp",
-        thumbnailRoute + "DJI_0098.webp",
-        thumbnailRoute + "DJI_0108.webp",
-        thumbnailRoute + "DJI_0123.webp",
-        thumbnailRoute + "DJI_0127.webp",
-        thumbnailRoute + "DJI_0129.webp",
-        thumbnailRoute + "DJI_0160.webp",
-        thumbnailRoute + "DJI_0168.webp",
-        thumbnailRoute + "DJI_0169.webp",
-        thumbnailRoute + "DJI_0173.webp",
-        thumbnailRoute + "DJI_0174.webp",
-        thumbnailRoute + "DJI_0177.webp",
-        thumbnailRoute + "DJI_0178.webp",
-        thumbnailRoute + "DJI_0179.webp",
-        thumbnailRoute + "DJI_0184.webp",
-        thumbnailRoute + "DJI_0185.webp",
-        thumbnailRoute + "DJI_0188.webp",
-        thumbnailRoute + "DJI_0196.webp",
-        thumbnailRoute + "DJI_0199.webp",
+        thumbnailRoute + "DSCF0311-HDR.webp",
+        thumbnailRoute + "DSCF0525.webp",
+        thumbnailRoute + "DSCF0531.webp",
+        thumbnailRoute + "DSCF0679.webp",
+        thumbnailRoute + "DSCF0758.webp",
+        thumbnailRoute + "DSCF0765.webp",
+        thumbnailRoute + "DSCF0785.webp",
+        thumbnailRoute + "DSCF1082.webp",
+        thumbnailRoute + "DSCF1087.webp",
+        thumbnailRoute + "DSCF1102.webp",
+        thumbnailRoute + "DSCF1104.webp",
+        thumbnailRoute + "DSCF1191.webp",
+        thumbnailRoute + "DSCF1243.webp",
+        thumbnailRoute + "DSCF1383.webp",
+        thumbnailRoute + "DSCF1386.webp",
+        thumbnailRoute + "DSCF3134.webp",
+        thumbnailRoute + "DSCF3337.webp",
+        thumbnailRoute + "DSCF3342.webp",
+        thumbnailRoute + "DSCF3432.webp",
+        thumbnailRoute + "DSCF3467.webp",
+        thumbnailRoute + "DSCF3504.webp",
+        thumbnailRoute + "DSCF3536.webp",
+        thumbnailRoute + "DSCF3547-HDR.webp",
+        thumbnailRoute + "DSCF3548.webp",
+        thumbnailRoute + "DSCF9397.webp",
+        thumbnailRoute + "DSCF9506-HDR.webp",
+        "keep",
       ];
 
       const galleryWrap = document.getElementById("gallery-wrap");
@@ -150,7 +165,7 @@
         img.alt = "";
         img.loading = "lazy";
 
-        img.onclick = (function(index) {
+        if (img.dataset.src !== "keep") img.onclick = (function(index) {
           return function() {
             let modal = document.getElementById("modal");
             let modalImg = document.getElementById("modalImage");

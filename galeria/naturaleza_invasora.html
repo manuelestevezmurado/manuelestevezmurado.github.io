@@ -84,7 +84,7 @@
 
   <div class="body-section-padding margin-top">
 
-    <h1 style="text-align: center; margin: 30px 0 30px 0">Aérea</h1>
+    <h1 style="text-align: center; margin: 30px 0 30px 0">Naturaleza invasora</h1>
 
     <div id="gallery-wrap" class="gallery-wrap"></div>
     <div id="modal" class="modal">
@@ -94,51 +94,48 @@
     </div>
 
     <script>
-      const originalRoute = "../assets/original/aerea/";
-      const thumbnailRoute = "../assets/thumbnail/aerea/";
+      const originalRoute = "../assets/original/naturaleza_invasora/";
+      const thumbnailRoute = "../assets/thumbnail/naturaleza_invasora/";
 
       let originalImages = [
-        originalRoute + "DJI_0078.webp",
-        originalRoute + "DJI_0098.webp",
-        originalRoute + "DJI_0108.webp",
-        originalRoute + "DJI_0123.webp",
-        originalRoute + "DJI_0127.webp",
-        originalRoute + "DJI_0129.webp",
-        originalRoute + "DJI_0160.webp",
-        originalRoute + "DJI_0168.webp",
-        originalRoute + "DJI_0169.webp",
-        originalRoute + "DJI_0173.webp",
-        originalRoute + "DJI_0174.webp",
-        originalRoute + "DJI_0177.webp",
-        originalRoute + "DJI_0178.webp",
-        originalRoute + "DJI_0179.webp",
-        originalRoute + "DJI_0184.webp",
-        originalRoute + "DJI_0185.webp",
-        originalRoute + "DJI_0188.webp",
-        originalRoute + "DJI_0196.webp",
-        originalRoute + "DJI_0199.webp",
+        originalRoute + "DSCF0002.webp",
+        originalRoute + "DSCF0271.webp",
+        originalRoute + "DSCF0283.webp",
+        originalRoute + "DSCF0817.webp",
+        originalRoute + "DSCF1149.webp",
+        originalRoute + "DSCF1169.webp",
+        originalRoute + "DSCF1177.webp",
+        originalRoute + "DSCF3199.webp",
+        originalRoute + "DSCF3362.webp",
+        originalRoute + "DSCF3461.webp",
+        originalRoute + "DSCF3483.webp",
+        originalRoute + "DSCF3501.webp",
+        originalRoute + "DSCF3508.webp",
+        originalRoute + "DSCF3514.webp",
+        originalRoute + "DSCF3593.webp",
+        originalRoute + "DSCF9778-Edit.webp",
+        originalRoute + "DSCF9942.webp",
       ];
 
       let thumbnailImages = [
-        thumbnailRoute + "DJI_0078.webp",
-        thumbnailRoute + "DJI_0098.webp",
-        thumbnailRoute + "DJI_0108.webp",
-        thumbnailRoute + "DJI_0123.webp",
-        thumbnailRoute + "DJI_0127.webp",
-        thumbnailRoute + "DJI_0129.webp",
-        thumbnailRoute + "DJI_0160.webp",
-        thumbnailRoute + "DJI_0168.webp",
-        thumbnailRoute + "DJI_0169.webp",
-        thumbnailRoute + "DJI_0173.webp",
-        thumbnailRoute + "DJI_0174.webp",
-        thumbnailRoute + "DJI_0177.webp",
-        thumbnailRoute + "DJI_0178.webp",
-        thumbnailRoute + "DJI_0179.webp",
-        thumbnailRoute + "DJI_0184.webp",
-        thumbnailRoute + "DJI_0185.webp",
-        thumbnailRoute + "DJI_0188.webp",
-        thumbnailRoute + "DJI_0196.webp",
-        thumbnailRoute + "DJI_0199.webp",
+        thumbnailRoute + "DSCF0002.webp",
+        thumbnailRoute + "DSCF0271.webp",
+        thumbnailRoute + "DSCF0283.webp",
+        thumbnailRoute + "DSCF0817.webp",
+        thumbnailRoute + "DSCF1149.webp",
+        thumbnailRoute + "DSCF1169.webp",
+        thumbnailRoute + "DSCF1177.webp",
+        thumbnailRoute + "DSCF3199.webp",
+        thumbnailRoute + "DSCF3362.webp",
+        thumbnailRoute + "DSCF3461.webp",
+        thumbnailRoute + "DSCF3483.webp",
+        thumbnailRoute + "DSCF3501.webp",
+        thumbnailRoute + "DSCF3508.webp",
+        thumbnailRoute + "DSCF3514.webp",
+        thumbnailRoute + "DSCF3593.webp",
+        thumbnailRoute + "DSCF9778-Edit.webp",
+        thumbnailRoute + "DSCF9942.webp",
+        "keep",
       ];
 
       const galleryWrap = document.getElementById("gallery-wrap");
@@ -150,7 +147,7 @@
         img.alt = "";
         img.loading = "lazy";
 
-        img.onclick = (function(index) {
+        if (img.dataset.src !== "keep") img.onclick = (function(index) {
           return function() {
             let modal = document.getElementById("modal");
             let modalImg = document.getElementById("modalImage");

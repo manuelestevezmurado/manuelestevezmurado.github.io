@@ -84,7 +84,7 @@
 
   <div class="body-section-padding margin-top">
 
-    <h1 style="text-align: center; margin: 30px 0 30px 0">Aérea</h1>
+    <h1 style="text-align: center; margin: 30px 0 30px 0">Texturas</h1>
 
     <div id="gallery-wrap" class="gallery-wrap"></div>
     <div id="modal" class="modal">
@@ -94,51 +94,47 @@
     </div>
 
     <script>
-      const originalRoute = "../assets/original/aerea/";
-      const thumbnailRoute = "../assets/thumbnail/aerea/";
+      const originalRoute = "../assets/original/texturas/";
+      const thumbnailRoute = "../assets/thumbnail/texturas/";
 
       let originalImages = [
-        originalRoute + "DJI_0078.webp",
-        originalRoute + "DJI_0098.webp",
-        originalRoute + "DJI_0108.webp",
-        originalRoute + "DJI_0123.webp",
-        originalRoute + "DJI_0127.webp",
-        originalRoute + "DJI_0129.webp",
-        originalRoute + "DJI_0160.webp",
-        originalRoute + "DJI_0168.webp",
-        originalRoute + "DJI_0169.webp",
-        originalRoute + "DJI_0173.webp",
-        originalRoute + "DJI_0174.webp",
-        originalRoute + "DJI_0177.webp",
-        originalRoute + "DJI_0178.webp",
-        originalRoute + "DJI_0179.webp",
-        originalRoute + "DJI_0184.webp",
-        originalRoute + "DJI_0185.webp",
-        originalRoute + "DJI_0188.webp",
-        originalRoute + "DJI_0196.webp",
-        originalRoute + "DJI_0199.webp",
+        originalRoute + "DSCF0266.webp",
+        originalRoute + "DSCF0776.webp",
+        originalRoute + "DSCF0829.webp",
+        originalRoute + "DSCF1048.webp",
+        originalRoute + "DSCF1054.webp",
+        originalRoute + "DSCF1128.webp",
+        originalRoute + "DSCF1296.webp",
+        originalRoute + "DSCF3188.webp",
+        originalRoute + "DSCF3351.webp",
+        originalRoute + "DSCF3438.webp",
+        originalRoute + "DSCF3445.webp",
+        originalRoute + "DSCF3553.webp",
+        originalRoute + "DSCF3563.webp",
+        originalRoute + "DSCF3578.webp",
+        originalRoute + "DSCF3598.webp",
+        originalRoute + "DSCF3601.webp",
       ];
 
       let thumbnailImages = [
-        thumbnailRoute + "DJI_0078.webp",
-        thumbnailRoute + "DJI_0098.webp",
-        thumbnailRoute + "DJI_0108.webp",
-        thumbnailRoute + "DJI_0123.webp",
-        thumbnailRoute + "DJI_0127.webp",
-        thumbnailRoute + "DJI_0129.webp",
-        thumbnailRoute + "DJI_0160.webp",
-        thumbnailRoute + "DJI_0168.webp",
-        thumbnailRoute + "DJI_0169.webp",
-        thumbnailRoute + "DJI_0173.webp",
-        thumbnailRoute + "DJI_0174.webp",
-        thumbnailRoute + "DJI_0177.webp",
-        thumbnailRoute + "DJI_0178.webp",
-        thumbnailRoute + "DJI_0179.webp",
-        thumbnailRoute + "DJI_0184.webp",
-        thumbnailRoute + "DJI_0185.webp",
-        thumbnailRoute + "DJI_0188.webp",
-        thumbnailRoute + "DJI_0196.webp",
-        thumbnailRoute + "DJI_0199.webp",
+        thumbnailRoute + "DSCF0266.webp",
+        thumbnailRoute + "DSCF0776.webp",
+        thumbnailRoute + "DSCF0829.webp",
+        thumbnailRoute + "DSCF1048.webp",
+        thumbnailRoute + "DSCF1054.webp",
+        thumbnailRoute + "DSCF1128.webp",
+        thumbnailRoute + "DSCF1296.webp",
+        thumbnailRoute + "DSCF3188.webp",
+        thumbnailRoute + "DSCF3351.webp",
+        thumbnailRoute + "DSCF3438.webp",
+        thumbnailRoute + "DSCF3445.webp",
+        thumbnailRoute + "DSCF3553.webp",
+        thumbnailRoute + "DSCF3563.webp",
+        thumbnailRoute + "DSCF3578.webp",
+        thumbnailRoute + "DSCF3598.webp",
+        thumbnailRoute + "DSCF3601.webp",
+        "keep",
+        "keep",
       ];
 
       const galleryWrap = document.getElementById("gallery-wrap");
@@ -150,7 +146,7 @@
         img.alt = "";
         img.loading = "lazy";
 
-        img.onclick = (function(index) {
+        if (img.dataset.src !== "keep") img.onclick = (function(index) {
           return function() {
             let modal = document.getElementById("modal");
             let modalImg = document.getElementById("modalImage");
