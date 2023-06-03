@@ -146,16 +146,20 @@
         img.alt = "";
         img.loading = "lazy";
 
-        if (img.dataset.src !== "keep") img.onclick = (function(index) {
-          return function() {
-            let modal = document.getElementById("modal");
-            let modalImg = document.getElementById("modalImage");
-            let captionText = document.getElementById("caption");
-            modal.style.display = "block";
-            modalImg.src = originalImages[index];
-            captionText.innerHTML = img.alt;
-          };
-        })(i);
+        if (img.dataset.src !== "keep"){
+          img.onclick = (function(index) {
+            return function() {
+              let modal = document.getElementById("modal");
+              let modalImg = document.getElementById("modalImage");
+              let captionText = document.getElementById("caption");
+              modal.style.display = "block";
+              modalImg.src = originalImages[index];
+              captionText.innerHTML = img.alt;
+            };
+          })(i);
+        } else {
+          img.style.opacity = "0";
+        }
 
         const observer = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {

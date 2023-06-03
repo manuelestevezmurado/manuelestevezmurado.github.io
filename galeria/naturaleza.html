@@ -84,7 +84,7 @@
 
   <div class="body-section-padding margin-top">
 
-    <h1 style="text-align: center; margin: 30px 0 30px 0">Naturaleza invasora</h1>
+    <h1 style="text-align: center; margin: 30px 0 30px 0">Naturaleza</h1>
 
     <div id="gallery-wrap" class="gallery-wrap"></div>
     <div id="modal" class="modal">
@@ -94,8 +94,8 @@
     </div>
 
     <script>
-      const originalRoute = "../assets/original/naturaleza_invasora/";
-      const thumbnailRoute = "../assets/thumbnail/naturaleza_invasora/";
+      const originalRoute = "../assets/original/naturaleza/";
+      const thumbnailRoute = "../assets/thumbnail/naturaleza/";
 
       let originalImages = [
         originalRoute + "DSCF0002.webp",
@@ -147,16 +147,20 @@
         img.alt = "";
         img.loading = "lazy";
 
-        if (img.dataset.src !== "keep") img.onclick = (function(index) {
-          return function() {
-            let modal = document.getElementById("modal");
-            let modalImg = document.getElementById("modalImage");
-            let captionText = document.getElementById("caption");
-            modal.style.display = "block";
-            modalImg.src = originalImages[index];
-            captionText.innerHTML = img.alt;
-          };
-        })(i);
+        if (img.dataset.src !== "keep"){
+          img.onclick = (function(index) {
+            return function() {
+              let modal = document.getElementById("modal");
+              let modalImg = document.getElementById("modalImage");
+              let captionText = document.getElementById("caption");
+              modal.style.display = "block";
+              modalImg.src = originalImages[index];
+              captionText.innerHTML = img.alt;
+            };
+          })(i);
+        } else {
+          img.style.opacity = "0";
+        }
 
         const observer = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {

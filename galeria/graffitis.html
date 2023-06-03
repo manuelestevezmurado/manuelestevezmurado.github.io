@@ -160,16 +160,20 @@
         img.alt = "";
         img.loading = "lazy";
 
-        if (img.dataset.src !== "keep") img.onclick = (function(index) {
-          return function() {
-            let modal = document.getElementById("modal");
-            let modalImg = document.getElementById("modalImage");
-            let captionText = document.getElementById("caption");
-            modal.style.display = "block";
-            modalImg.src = originalImages[index];
-            captionText.innerHTML = img.alt;
-          };
-        })(i);
+        if (img.dataset.src !== "keep"){
+          img.onclick = (function(index) {
+            return function() {
+              let modal = document.getElementById("modal");
+              let modalImg = document.getElementById("modalImage");
+              let captionText = document.getElementById("caption");
+              modal.style.display = "block";
+              modalImg.src = originalImages[index];
+              captionText.innerHTML = img.alt;
+            };
+          })(i);
+        } else {
+          img.style.opacity = "0";
+        }
 
         const observer = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
@@ -195,7 +199,7 @@
 
     <div style="width: 100%; text-align: center">
       <div class="next-prev-container">
-        <a href="naturaleza_invasora.html" target="_self">
+        <a href="naturaleza.html" target="_self">
           <button>
             <i class="fa fa-chevron-left"></i>&nbsp;ANTERIOR
           </button>
