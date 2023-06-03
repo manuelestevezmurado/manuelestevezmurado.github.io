@@ -27,6 +27,17 @@
     font-size: 1rem;
 }
 
+#navigation a:hover {
+    color: lightgrey;
+}
+
+.header-expanded a:hover {
+    color: lightgrey;
+}
+
+.header-collapsed a:hover {
+    color: lightgrey;
+}
 
 /* NAVIGATION BUTTON */
 .navigation-button {

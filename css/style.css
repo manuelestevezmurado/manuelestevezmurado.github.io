@@ -44,9 +44,6 @@ a {
     text-decoration: none;
     transition: 0.1s ease-in-out;
 }
-a:hover {
-    color: lightgrey;
-}
 
 hr {
     border: none;

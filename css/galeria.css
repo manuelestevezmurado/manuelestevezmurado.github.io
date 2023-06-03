@@ -22,7 +22,7 @@
 }
 
 .title-navigation-container{
-    overflow-x: auto;
+    overflow-x: hidden;
     display: flex;
     flex-shrink: 0;
     align-items: center;
@@ -45,13 +45,14 @@
     margin-top: 0;
     margin-bottom: 0;
     font-size: 1.5rem;
-    color: lightgrey;
+    color: white;
     font-weight: lighter;
     padding: 0 5px 0 5px;
+    transition: transform 0.3s ease;
 }
 
 .title-navigation-link:hover{
-    color: white;
+    transform: scale(1.1);
 }
 
 .next-prev-container{
