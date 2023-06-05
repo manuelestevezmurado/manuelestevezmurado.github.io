@@ -46,7 +46,7 @@
 
         <div class="index-home body-section">
 
-            <video id="bg-video" autoplay loop muted>
+            <video id="bg-video" class="hidden" loop muted>
                 <source src="assets/drone_view_1080_16-9.mp4" type="video/mp4">
                 <source src="assets/drone_view_1080_16-9.mov" type="video/mov">
             </video>
@@ -57,7 +57,7 @@
 
                     var containerWidth = container.offsetWidth;
                     var containerHeight = container.offsetHeight;
-                    var videoAspectRatio = video.videoWidth / video.videoHeight;
+                    var videoAspectRatio = 16 / 9;
 
                     var containerAspectRatio = containerWidth / containerHeight;
                     if (containerAspectRatio > videoAspectRatio) {
@@ -67,6 +67,9 @@
                         video.style.width = 'auto';
                         video.style.height = '100%';
                     }
+
+                    video.classList.remove('hidden');
+                    video.play();
                 }
 
                 function toggleVideoPlayback() {

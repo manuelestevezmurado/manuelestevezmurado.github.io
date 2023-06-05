@@ -140,6 +140,10 @@ button:hover{
     user-select: none;
 }
 
+.hidden {
+    display: none;
+}
+
 /* TABLETS */
 @media screen and (max-width: 1100px) and (min-width: 851px){
 

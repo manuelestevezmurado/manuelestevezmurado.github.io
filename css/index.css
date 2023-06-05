@@ -11,7 +11,7 @@
     height: 90vh;
     color: white;                                               /* TODO: EDITAR */
     background-color: #14110f;                                  /* TODO: EDITAR */
-    background-image: url("../assets/drone_view_frame_0.webp");
+    /*background-image: url("../assets/drone_view_frame_0.webp");*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
