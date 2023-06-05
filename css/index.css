@@ -11,7 +11,8 @@
     height: 90vh;
     color: white;                                               /* TODO: EDITAR */
     background-color: #14110f;                                  /* TODO: EDITAR */
-    background-image: url("../assets/drone_view.gif");
+
+
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -20,6 +21,20 @@
     justify-content: space-between;
     position: relative;
     transition: background-image 1s ease;
+    overflow: hidden;
+}
+
+.index-home video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100vw;
+    min-height: 100%;
+}
+
+#fotografias{
+    z-index: 200;
 }
 
 .index-home::after {

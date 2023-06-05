@@ -45,6 +45,45 @@
         </div>
 
         <div class="index-home body-section">
+
+            <video id="bg-video" autoplay loop muted>
+                <source src="assets/drone_view_1080.webm" type="video/webm">
+            </video>
+            <script>
+                function centerVideo() {
+                    var video = document.getElementById('bg-video');
+                    var container = video.parentElement;
+
+                    var containerWidth = container.offsetWidth;
+                    var containerHeight = container.offsetHeight;
+                    var videoAspectRatio = video.videoWidth / video.videoHeight;
+
+                    var containerAspectRatio = containerWidth / containerHeight;
+                    if (containerAspectRatio > videoAspectRatio) {
+                        video.style.width = '100%';
+                        video.style.height = 'auto';
+                    } else {
+                        video.style.width = 'auto';
+                        video.style.height = '100%';
+                    }
+                }
+
+                function toggleVideoPlayback() {
+                    var video = document.getElementById('bg-video');
+                    if (video.paused) {
+                        video.play();
+                    } else {
+                        video.pause();
+                    }
+                }
+
+                window.addEventListener('resize', centerVideo);
+                window.addEventListener('load', centerVideo);
+
+                var videoElement = document.getElementById('bg-video');
+                videoElement.addEventListener('click', toggleVideoPlayback);
+            </script>
+
             <div class="header-container">
                 <header class="header-expanded body-section">
                     <div class="header-title">
