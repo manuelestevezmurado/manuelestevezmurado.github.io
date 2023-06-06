@@ -30,244 +30,245 @@
     });
 </script>
 
-    <div class="header-and-content">
-        <div id="navigation" style="display: none">
-            <script src="scripts/navigation.js"></script>
-            <div></div>
-            <div>
-                <p><a href="index.html#fotografias">FOTOGRAFÍAS</a></p>
-                <p><a href="fotolibro.html">FOTOLIBRO</a></p>
-                <p><a href="informacion.html">INFORMACIÓN</a></p>
-                <p><a href="ubicaciones.html">UBICACIONES</a></p>
-                <p><a href="contacto.html">CONTACTO</a></p>
-            </div>
-            <div></div>
+<div class="header-and-content">
+    <div id="navigation" style="display: none">
+        <script src="scripts/navigation.js"></script>
+        <div></div>
+        <div>
+            <p><a href="index.html#fotografias">FOTOGRAFÍAS</a></p>
+            <p><a href="fotolibro.html">FOTOLIBRO</a></p>
+            <p><a href="informacion.html">INFORMACIÓN</a></p>
+            <p><a href="ubicaciones.html">UBICACIONES</a></p>
+            <p><a href="contacto.html">CONTACTO</a></p>
         </div>
+        <div></div>
+    </div>
 
-        <div class="index-home body-section">
+    <div class="index-home body-section">
 
-            <!--<img id="bg-img" src="assets/drone_view_frame_0.webp" alt="">-->
-            <video id="bg-video" class="hidden" loop muted>
-                <source src="assets/drone_view_1080_16-9.mp4" type="video/mp4">
-            </video>
-            <script>
-                function centerVideo() {
-                    //var img = document.getElementById('bg-img');
-                    var video = document.getElementById('bg-video');
-                    var container = video.parentElement;
+        <!--<img id="bg-img" src="assets/drone_view_frame_0.webp" alt="">-->
+        <video id="bg-video" class="hidden" loop muted>
+            <source src="assets/drone_view_1080_16-9.mp4" type="video/mp4">
+            <source src="assets/drone_view_1080_16-9.webm" type="video/webm">
+        </video>
+        <script>
+            function centerVideo() {
+                //var img = document.getElementById('bg-img');
+                var video = document.getElementById('bg-video');
+                var container = video.parentElement;
 
-                    var containerWidth = container.offsetWidth;
-                    var containerHeight = container.offsetHeight;
-                    //var imageAspectRatio = 16 / 9;
-                    var videoAspectRatio = 16 / 9;
+                var containerWidth = container.offsetWidth;
+                var containerHeight = container.offsetHeight;
+                //var imageAspectRatio = 16 / 9;
+                var videoAspectRatio = 16 / 9;
 
-                    var containerAspectRatio = containerWidth / containerHeight;
-                    /*if (containerAspectRatio > imageAspectRatio) {
-                        img.style.width = '100%';
-                        img.style.height = 'auto';
-                    } else {
-                        img.style.width = 'auto';
-                        img.style.height = '100%';
-                    }*/
+                var containerAspectRatio = containerWidth / containerHeight;
+                /*if (containerAspectRatio > imageAspectRatio) {
+                    img.style.width = '100%';
+                    img.style.height = 'auto';
+                } else {
+                    img.style.width = 'auto';
+                    img.style.height = '100%';
+                }*/
 
-                    if (containerAspectRatio > videoAspectRatio) {
-                        video.style.width = '100%';
-                        video.style.height = 'auto';
-                    } else {
-                        video.style.width = 'auto';
-                        video.style.height = '100%';
-                    }
+                if (containerAspectRatio > videoAspectRatio) {
+                    video.style.width = '100%';
+                    video.style.height = 'auto';
+                } else {
+                    video.style.width = 'auto';
+                    video.style.height = '100%';
+                }
 
-                    video.classList.remove('hidden');
+                video.classList.remove('hidden');
+                video.play();
+            }
+
+            function toggleVideoPlayback() {
+                var video = document.getElementById('bg-video');
+                if (video.paused) {
                     video.play();
+                } else {
+                    video.pause();
                 }
+            }
 
-                function toggleVideoPlayback() {
-                    var video = document.getElementById('bg-video');
-                    if (video.paused) {
-                        video.play();
-                    } else {
-                        video.pause();
+            window.addEventListener('resize', centerVideo);
+            window.addEventListener('load', centerVideo);
+
+            var videoElement = document.getElementById('bg-video');
+            videoElement.addEventListener('click', toggleVideoPlayback);
+        </script>
+
+        <div class="header-container">
+            <header class="header-expanded body-section">
+                <div class="header-title">
+                    <a href="index.html">
+                        <h1>El arte de la ruina</h1>
+                        <p>Manuel Estévez Murado</p>
+                    </a>
+                </div>
+                <div class="header-links">
+                    <p>
+                        <a href="index.html#fotografias">FOTOGRAFÍAS</a>
+                        &nbsp;
+                        <a href="fotolibro.html">FOTOLIBRO</a>
+                        &nbsp;
+                        <a href="informacion.html">INFORMACIÓN</a>
+                        &nbsp;
+                        <a href="ubicaciones.html">UBICACIONES</a>
+                        &nbsp;
+                        <a href="contacto.html">CONTACTO</a>
+                    </p>
+                </div>
+            </header>
+            <header class="header-collapsed body-section">
+                <div class="header-title">
+                    <a href="index.html">
+                        <h1>El arte de la ruina</h1>
+                        <p>Manuel Estévez Murado</p>
+                    </a>
+                </div>
+                <div>
+                    <div class="navigation-button" onclick="toggleNavigation(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div></div>
+        <div class="index-home-swipe-button">
+            <script>
+                function scrollToIntro(){
+                    const targetElement = document.querySelector('#fotografias');
+                    const targetPosition = targetElement.offsetTop;
+                    const startPosition = window.pageYOffset;
+                    const distance = targetPosition - startPosition;
+
+                    const duration = 400;
+                    let start = null;
+                    window.requestAnimationFrame(step);
+
+                    function step(timestamp) {
+                        if (!start) start = timestamp;
+                        const progress = timestamp - start;
+                        window.scrollTo(0, easeInOutQuad(progress, startPosition, distance, duration));
+                        if (progress < duration) window.requestAnimationFrame(step);
+                    }
+
+                    // Easing function para una transición suave
+                    function easeInOutQuad(t, b, c, d) {
+                        t /= d/2;
+                        if (t < 1) return c/2*t*t + b;
+                        t--;
+                        return -c/2 * (t*(t-2) - 1) + b;
                     }
                 }
-
-                window.addEventListener('resize', centerVideo);
-                window.addEventListener('load', centerVideo);
-
-                var videoElement = document.getElementById('bg-video');
-                videoElement.addEventListener('click', toggleVideoPlayback);
             </script>
+            <a id="scroll-button" style="cursor: pointer" onclick="scrollToIntro()">
+                <p style="user-select: none; font-size: 1.25rem; font-style: italic">Desliza para ver las fotografías<br>
+                    <i class="fa fa-angle-double-down" style="animation: bounce 2.5s infinite;"></i>
+                </p>
+            </a>
+        </div>
+    </div>
 
-            <div class="header-container">
-                <header class="header-expanded body-section">
-                    <div class="header-title">
-                        <a href="index.html">
-                            <h1>El arte de la ruina</h1>
-                            <p>Manuel Estévez Murado</p>
-                        </a>
-                    </div>
-                    <div class="header-links">
-                        <p>
-                            <a href="index.html#fotografias">FOTOGRAFÍAS</a>
-                            &nbsp;
-                            <a href="fotolibro.html">FOTOLIBRO</a>
-                            &nbsp;
-                            <a href="informacion.html">INFORMACIÓN</a>
-                            &nbsp;
-                            <a href="ubicaciones.html">UBICACIONES</a>
-                            &nbsp;
-                            <a href="contacto.html">CONTACTO</a>
-                        </p>
-                    </div>
-                </header>
-                <header class="header-collapsed body-section">
-                    <div class="header-title">
-                        <a href="index.html">
-                            <h1>El arte de la ruina</h1>
-                            <p>Manuel Estévez Murado</p>
-                        </a>
-                    </div>
-                    <div>
-                        <div class="navigation-button" onclick="toggleNavigation(this)">
-                            <div class="bar1"></div>
-                            <div class="bar2"></div>
-                            <div class="bar3"></div>
-                        </div>
-                    </div>
-                </header>
-            </div>
-            <div></div>
-            <div class="index-home-swipe-button">
-                <script>
-                    function scrollToIntro(){
-                        const targetElement = document.querySelector('#fotografias');
-                        const targetPosition = targetElement.offsetTop;
-                        const startPosition = window.pageYOffset;
-                        const distance = targetPosition - startPosition;
+    <div id="fotografias" class="index-galleries body-section-padding">
 
-                        const duration = 400;
-                        let start = null;
-                        window.requestAnimationFrame(step);
+        <div class="index-galleries-wrap">
 
-                        function step(timestamp) {
-                            if (!start) start = timestamp;
-                            const progress = timestamp - start;
-                            window.scrollTo(0, easeInOutQuad(progress, startPosition, distance, duration));
-                            if (progress < duration) window.requestAnimationFrame(step);
-                        }
-
-                        // Easing function para una transición suave
-                        function easeInOutQuad(t, b, c, d) {
-                            t /= d/2;
-                            if (t < 1) return c/2*t*t + b;
-                            t--;
-                            return -c/2 * (t*(t-2) - 1) + b;
-                        }
-                    }
-                </script>
-                <a id="scroll-button" style="cursor: pointer" onclick="scrollToIntro()">
-                    <p style="user-select: none; font-size: 1.25rem; font-style: italic">Desliza para ver las fotografías<br>
-                        <i class="fa fa-angle-double-down" style="animation: bounce 2.5s infinite;"></i>
+            <div class="index-galleries-section">
+                <a class="index-galleries-section-link" href="galeria/bodegones.html">
+                    <div class="index-galleries-section-image" style="background-image: url('assets/thumbnail/bodegones/DSCF9496-HDR.webp')">
+                    </div>
+                    <p class="index-galleries-section-text no-select">
+                        Bodegones
                     </p>
                 </a>
             </div>
-        </div>
 
-        <div id="fotografias" class="index-galleries body-section-padding">
+            <div class="index-galleries-section">
+                <a class="index-galleries-section-link" href="galeria/interiores.html">
+                    <div class="index-galleries-section-image" style="background-image: url('assets/thumbnail/interiores/DSCF3467.webp')">
+                    </div>
+                    <p class="index-galleries-section-text no-select">
+                        Interiores
+                    </p>
+                </a>
+            </div>
 
-            <div class="index-galleries-wrap">
+            <div class="index-galleries-section">
+                <a class="index-galleries-section-link" href="galeria/naturaleza.html">
+                    <div class="index-galleries-section-image" style="background-image: url('assets/thumbnail/naturaleza/DSCF3483.webp')">
+                    </div>
+                    <p class="index-galleries-section-text no-select">
+                        Naturaleza
+                    </p>
+                </a>
+            </div>
 
-                <div class="index-galleries-section">
-                    <a class="index-galleries-section-link" href="galeria/bodegones.html">
-                        <div class="index-galleries-section-image" style="background-image: url('assets/thumbnail/bodegones/DSCF9496-HDR.webp')">
-                        </div>
-                        <p class="index-galleries-section-text no-select">
-                            Bodegones
-                        </p>
-                    </a>
-                </div>
+            <div class="index-galleries-section">
+                <a class="index-galleries-section-link" href="galeria/graffitis.html">
+                    <div class="index-galleries-section-image" style="background-image: url('assets/thumbnail/graffitis/DSCF0436.webp')">
+                    </div>
+                    <p class="index-galleries-section-text no-select">
+                        Graffitis
+                    </p>
+                </a>
+            </div>
 
-                <div class="index-galleries-section">
-                    <a class="index-galleries-section-link" href="galeria/interiores.html">
-                        <div class="index-galleries-section-image" style="background-image: url('assets/thumbnail/interiores/DSCF3467.webp')">
-                        </div>
-                        <p class="index-galleries-section-text no-select">
-                            Interiores
-                        </p>
-                    </a>
-                </div>
+            <div class="index-galleries-section">
+                <a class="index-galleries-section-link" href="galeria/texturas.html">
+                    <div class="index-galleries-section-image" style="background-image: url('assets/thumbnail/texturas/DSCF1054.webp')">
+                    </div>
+                    <p class="index-galleries-section-text no-select">
+                        Texturas
+                    </p>
+                </a>
+            </div>
 
-                <div class="index-galleries-section">
-                    <a class="index-galleries-section-link" href="galeria/naturaleza.html">
-                        <div class="index-galleries-section-image" style="background-image: url('assets/thumbnail/naturaleza/DSCF3483.webp')">
-                        </div>
-                        <p class="index-galleries-section-text no-select">
-                            Naturaleza
-                        </p>
-                    </a>
-                </div>
+            <div class="index-galleries-section">
+                <a class="index-galleries-section-link" href="galeria/geometria.html">
+                    <div class="index-galleries-section-image" style="background-image: url('assets/thumbnail/geometria/DSCF0415-HDR.webp')">
+                    </div>
+                    <p class="index-galleries-section-text no-select">
+                        Geometría
+                    </p>
+                </a>
+            </div>
 
-                <div class="index-galleries-section">
-                    <a class="index-galleries-section-link" href="galeria/graffitis.html">
-                        <div class="index-galleries-section-image" style="background-image: url('assets/thumbnail/graffitis/DSCF0436.webp')">
-                        </div>
-                        <p class="index-galleries-section-text no-select">
-                            Graffitis
-                        </p>
-                    </a>
-                </div>
+            <div class="index-galleries-section">
+                <a class="index-galleries-section-link" href="galeria/grandes_construcciones.html">
+                    <div class="index-galleries-section-image" style="background-image: url('assets/thumbnail/grandes_construcciones/DSCF0871.webp')">
+                    </div>
+                    <p class="index-galleries-section-text no-select">
+                        Grandes construcciones
+                    </p>
+                </a>
+            </div>
 
-                <div class="index-galleries-section">
-                    <a class="index-galleries-section-link" href="galeria/texturas.html">
-                        <div class="index-galleries-section-image" style="background-image: url('assets/thumbnail/texturas/DSCF1054.webp')">
-                        </div>
-                        <p class="index-galleries-section-text no-select">
-                            Texturas
-                        </p>
-                    </a>
-                </div>
-
-                <div class="index-galleries-section">
-                    <a class="index-galleries-section-link" href="galeria/geometria.html">
-                        <div class="index-galleries-section-image" style="background-image: url('assets/thumbnail/geometria/DSCF0415-HDR.webp')">
-                        </div>
-                        <p class="index-galleries-section-text no-select">
-                            Geometría
-                        </p>
-                    </a>
-                </div>
-
-                <div class="index-galleries-section">
-                    <a class="index-galleries-section-link" href="galeria/grandes_construcciones.html">
-                        <div class="index-galleries-section-image" style="background-image: url('assets/thumbnail/grandes_construcciones/DSCF0871.webp')">
-                        </div>
-                        <p class="index-galleries-section-text no-select">
-                            Grandes construcciones
-                        </p>
-                    </a>
-                </div>
-
-                <div class="index-galleries-section">
-                    <a class="index-galleries-section-link" href="galeria/aerea.html">
-                        <div class="index-galleries-section-image" style="background-image: url('assets/thumbnail/aerea/DJI_0174.webp')">
-                        </div>
-                        <p class="index-galleries-section-text no-select">
-                            Aérea
-                        </p>
-                    </a>
-                </div>
-
+            <div class="index-galleries-section">
+                <a class="index-galleries-section-link" href="galeria/aerea.html">
+                    <div class="index-galleries-section-image" style="background-image: url('assets/thumbnail/aerea/DJI_0174.webp')">
+                    </div>
+                    <p class="index-galleries-section-text no-select">
+                        Aérea
+                    </p>
+                </a>
             </div>
 
         </div>
 
     </div>
 
-    <footer>
-        <p>
-            &copy;&nbsp;MANUEL ESTÉVEZ MURADO 2023
-        </p>
-    </footer>
+</div>
+
+<footer>
+    <p>
+        &copy;&nbsp;MANUEL ESTÉVEZ MURADO 2023
+    </p>
+</footer>
 
 </body>
 </html>
