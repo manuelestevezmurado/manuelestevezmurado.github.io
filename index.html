@@ -46,20 +46,30 @@
 
         <div class="index-home body-section">
 
+            <!--<img id="bg-img" src="assets/drone_view_frame_0.webp" alt="">-->
             <video id="bg-video" class="hidden" loop muted>
                 <source src="assets/drone_view_1080_16-9.mp4" type="video/mp4">
-                <source src="assets/drone_view_1080_16-9.mov" type="video/mov">
             </video>
             <script>
                 function centerVideo() {
+                    //var img = document.getElementById('bg-img');
                     var video = document.getElementById('bg-video');
                     var container = video.parentElement;
 
                     var containerWidth = container.offsetWidth;
                     var containerHeight = container.offsetHeight;
+                    //var imageAspectRatio = 16 / 9;
                     var videoAspectRatio = 16 / 9;
 
                     var containerAspectRatio = containerWidth / containerHeight;
+                    /*if (containerAspectRatio > imageAspectRatio) {
+                        img.style.width = '100%';
+                        img.style.height = 'auto';
+                    } else {
+                        img.style.width = 'auto';
+                        img.style.height = '100%';
+                    }*/
+
                     if (containerAspectRatio > videoAspectRatio) {
                         video.style.width = '100%';
                         video.style.height = 'auto';
