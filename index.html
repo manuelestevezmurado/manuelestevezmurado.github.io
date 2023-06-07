@@ -35,7 +35,7 @@
         <script src="scripts/navigation.js"></script>
         <div></div>
         <div>
-            <p><a href="index.html#fotografias">FOTOGRAFÍAS</a></p>
+            <p><a style="cursor: pointer" onclick="closeNavigationAndScrollToIntro()">FOTOGRAFÍAS</a></p>
             <p><a href="fotolibro.html">FOTOLIBRO</a></p>
             <p><a href="informacion.html">INFORMACIÓN</a></p>
             <p><a href="ubicaciones.html">UBICACIONES</a></p>
@@ -110,7 +110,7 @@
                 </div>
                 <div class="header-links">
                     <p>
-                        <a href="index.html#fotografias">FOTOGRAFÍAS</a>
+                        <a style="cursor: pointer" onclick="scrollToIntro()">FOTOGRAFÍAS</a>
                         &nbsp;
                         <a href="fotolibro.html">FOTOLIBRO</a>
                         &nbsp;
@@ -132,7 +132,7 @@
                     </a>
                 </div>
                 <div>
-                    <div class="navigation-button" onclick="toggleNavigation(this)">
+                    <div id="navigation-button" class="navigation-button" onclick="toggleNavigation(this)">
                         <div class="bar1"></div>
                         <div class="bar2"></div>
                         <div class="bar3"></div>
@@ -143,6 +143,14 @@
         <div></div>
         <div class="index-home-swipe-button">
             <script>
+                function closeNavigationAndScrollToIntro(){
+                    const navigationButton = document.getElementById("navigation-button");
+
+                    toggleNavigation(navigationButton);
+
+                    scrollToIntro()
+                }
+
                 function scrollToIntro(){
                     const targetElement = document.querySelector('#fotografias');
                     const targetPosition = targetElement.offsetTop;
