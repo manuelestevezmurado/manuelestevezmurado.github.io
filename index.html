@@ -52,25 +52,17 @@
             <source src="assets/drone_view_1080_16-9.mp4" type="video/mp4">
             <source src="assets/drone_view_1080_16-9.webm" type="video/webm">
         </video>
+        <img id="bg-image" class="hidden" src="assets/drone_view_frame_0.webp" alt="">
         <script>
             function centerVideo() {
-                //var img = document.getElementById('bg-img');
                 var video = document.getElementById('bg-video');
                 var container = video.parentElement;
 
                 var containerWidth = container.offsetWidth;
                 var containerHeight = container.offsetHeight;
-                //var imageAspectRatio = 16 / 9;
                 var videoAspectRatio = 16 / 9;
 
                 var containerAspectRatio = containerWidth / containerHeight;
-                /*if (containerAspectRatio > imageAspectRatio) {
-                    img.style.width = '100%';
-                    img.style.height = 'auto';
-                } else {
-                    img.style.width = 'auto';
-                    img.style.height = '100%';
-                }*/
 
                 if (containerAspectRatio > videoAspectRatio) {
                     video.style.width = '100%';
@@ -93,13 +85,31 @@
                 }
             }
 
+            function checkVideoSupport() {
+                var video = document.getElementById('bg-video');
+                var image = document.getElementById('bg-image');
+
+                if (video.canPlayType) {
+                    var canPlayMp4 = video.canPlayType('video/mp4');
+                    var canPlayWebm = video.canPlayType('video/webm');
+
+                    if (canPlayMp4 === '' && canPlayWebm === '') {
+                        video.classList.add('hidden');
+                        image.classList.remove('hidden');
+                    } else {
+                        video.classList.remove('hidden');
+                        image.classList.add('hidden');
+                        centerVideo();
+                    }
+                }
+            }
+
             window.addEventListener('resize', centerVideo);
-            window.addEventListener('load', centerVideo);
+            window.addEventListener('load', checkVideoSupport);
 
             var videoElement = document.getElementById('bg-video');
             videoElement.addEventListener('click', toggleVideoPlayback);
         </script>
-
         <div class="header-container">
             <header class="header-expanded body-section">
                 <div class="header-title">
