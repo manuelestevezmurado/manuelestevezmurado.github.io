@@ -1,0 +1,42 @@
+.main-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 70vh;
+}
+
+#explanation{
+    display: block;
+    color: #a1a1a1;
+    font-size: 0.7rem;
+    text-align: center;
+    font-style: italic;
+}
+
+textarea {
+    width: 30vw;
+    min-width: 30vw;
+    min-height: 1rem;
+    max-width: 80vw;
+    max-height: 40vh;
+    resize: none;
+}
+
+/* TABLETS */
+@media screen and (max-width: 1100px) and (min-width: 851px){
+
+    textarea {
+        width: 50vw;
+    }
+
+}
+
+/* SMARTPHONES */
+@media screen and (max-width: 850px) {
+
+    textarea {
+        width: 80vw;
+    }
+
+}

@@ -1,10 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- TODO: EDITAR -->
+<html lang="es">
+
+<!-- TODO: EDITAR -->
 <head>
+    <!-- TODO: EDITAR -->
+    <title>CONTACTO / EL ARTE DE LA RUINA</title>
+
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Joaquín Solla Vázquez, Manuel Estévez Murado">
+    <!-- TODO: EDITAR -->
+    <meta name="description" content="Manuel Estévez Murado: Contacto">
+    <!-- TODO: EDITAR -->
+    <meta name="keywords" content="...">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="icon" href="/assets/favicon-light.ico" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="/assets/favicon-dark.ico" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
+
+<script>
+    document.addEventListener("contextmenu", function(e) {
+        e.preventDefault();
+    });
+</script>
+
+<div class="header-and-content">
+    <div id="navigation" style="display: none">
+        <script src="scripts/navigation.js"></script>
+        <div></div>
+        <div>
+            <p><a href="index.html#fotografias">FOTOGRAFÍAS</a></p>
+            <p><a href="fotolibro.html">FOTOLIBRO</a></p>
+            <p><a href="informacion.html">INFORMACIÓN</a></p>
+            <p><a href="ubicaciones.html">UBICACIONES</a></p>
+            <p><a href="https://www.etsy.com/es/shop/elartedelaruina?ref=seller-platform-mcnav" target="_blank">TIENDA</a></p>
+            <p><a href="contacto.html">CONTACTO</a></p>
+        </div>
+        <div></div>
+    </div>
+    <div class="header-container">
+        <header class="header-expanded body-section">
+            <div class="header-title">
+                <a href="index.html">
+                    <h1>El arte de la ruina</h1>
+                    <p>Manuel Estévez Murado</p>
+                </a>
+            </div>
+            <div class="header-links">
+                <p>
+                    <a href="index.html#fotografias">FOTOGRAFÍAS</a>
+                    &nbsp;
+                    <a href="fotolibro.html">FOTOLIBRO</a>
+                    &nbsp;
+                    <a href="informacion.html">INFORMACIÓN</a>
+                    &nbsp;
+                    <a href="ubicaciones.html">UBICACIONES</a>
+                    &nbsp;
+                    <a href="https://www.etsy.com/es/shop/elartedelaruina?ref=seller-platform-mcnav" target="_blank">TIENDA</a>
+                    &nbsp;
+                    <a href="contacto.html">CONTACTO</a>
+                </p>
+            </div>
+        </header>
+        <header class="header-collapsed body-section">
+            <div class="header-title">
+                <a href="index.html">
+                    <h1>El arte de la ruina</h1>
+                    <p>Manuel Estévez Murado</p>
+                </a>
+            </div>
+            <div>
+                <div class="navigation-button" onclick="toggleNavigation(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="body-section-padding margin-top main-container">
+
+        <div>
+            <script>
+                function sendEmail() {
+                    var emailInput = document.getElementById('email-input');
+                    var message = emailInput.value;
+
+                    if (message.trim() !== '') {
+                        var subject = 'Contacto vía El Arte de la Ruina';
+                        var mailtoLink = 'mailto:estevezmurado@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(message);
+                        window.location.href = mailtoLink;
+                    }
+                }
+            </script>
+            <div>
+                <h1>Contacto vía email</h1>
+            </div>
+            <div>
+                <label for="email-input"></label>
+                <textarea id="email-input" placeholder="Cuerpo del mensaje"></textarea>
+            </div>
+            <script>
+                const textarea = document.getElementById('email-input');
+
+                textarea.addEventListener('input', function() {
+                    this.style.height = 'auto';
+                    this.style.height = this.scrollHeight + 'px';
+                });
+            </script>
+
+            <div class="center no-select margin-top">
+                <button onclick="sendEmail()">
+                    <i class="fa fa-envelope"></i>&nbsp;ENVIAR EMAIL
+                </button>
+            </div>
+            <p id="explanation">Enviar email a: estevezmurado@gmail.com</p>
+
+            <div>
+                <h1>&nbsp;</h1>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>
+        &copy;&nbsp;MANUEL ESTÉVEZ MURADO 2023
+    </p>
+</footer>
 
 </body>
 </html>
