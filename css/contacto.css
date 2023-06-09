@@ -1,9 +1,5 @@
 .main-container{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    min-height: 70vh;
 }
 
 #explanation{
@@ -14,20 +10,45 @@
     font-style: italic;
 }
 
-textarea {
-    width: 30vw;
+textarea, input {
+    margin-top: 10px;
+    width: 75%;
     min-width: 30vw;
-    min-height: 1rem;
-    max-width: 80vw;
-    max-height: 40vh;
-    resize: none;
+}
+
+#name-input{
+    height: 2rem;
+}
+
+#email-input{
+    height: 20vh;
+}
+
+.input-container{
+    align-items:start;
+    justify-content: initial;
+    text-align: left;
+    font-weight: bold;
+}
+
+#email-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 /* TABLETS */
 @media screen and (max-width: 1100px) and (min-width: 851px){
 
-    textarea {
-        width: 50vw;
+    textarea, input {
+        width: 90vw;
+        min-width: 30vw;
+    }
+
+    .main-container{
+        display: block;
     }
 
 }
@@ -35,8 +56,13 @@ textarea {
 /* SMARTPHONES */
 @media screen and (max-width: 850px) {
 
-    textarea {
-        width: 80vw;
+    textarea, input {
+        width: 85vw;
+        min-width: 30vw;
+    }
+
+    .main-container{
+        display: block;
     }
 
 }

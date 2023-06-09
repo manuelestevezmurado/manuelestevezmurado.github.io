@@ -87,44 +87,53 @@
 
     <div class="body-section-padding margin-top main-container">
 
-        <div>
-            <script>
-                function sendEmail() {
-                    var emailInput = document.getElementById('email-input');
-                    var message = emailInput.value;
+        <div class="left container-49_5" style="text-align: center">
+            <h2>Contacto</h2>
+            <p style="text-align: justify">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et odio consectetur, dictum elit vel, cursus libero. Pellentesque malesuada rhoncus cursus. Aenean iaculis pulvinar facilisis. Fusce id bibendum ex, sit amet vulputate purus. Suspendisse vitae fringilla justo, quis elementum tortor. Pellentesque suscipit, diam eget viverra semper, magna velit bibendum orci, non lobortis ipsum augue ac enim. Quisque vulputate ultrices mi ac pellentesque. Donec aliquam lectus et nisi tristique, sodales molestie nibh vehicula. Morbi viverra aliquet velit, eget bibendum nunc gravida ac.
+            </p>
+            <p style="text-align: justify">
+                Vivamus cursus dolor sem, ac luctus ligula rhoncus ac. Fusce ut eros eget libero tristique dictum at vel est. Phasellus maximus gravida nibh, non suscipit justo cursus eget. Integer sit amet est vulputate, blandit neque quis, luctus dolor. Aliquam non ultricies neque. Duis neque nisl, dignissim id vehicula eu, eleifend vel sem. Aliquam nec magna et augue vestibulum luctus et quis ex.
+            </p>
+        </div>
 
-                    if (message.trim() !== '') {
-                        var subject = 'Contacto vía El Arte de la Ruina';
-                        window.location.href = 'mailto:estevezmurado@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(message);
-                    }
-                }
-            </script>
-            <div>
-                <h1>Contacto vía email</h1>
+        <div class="vertical-hr-container display-on-big">
+            <hr class="vertical-hr">
+        </div>
+        <div class="hr-container display-on-small">
+            <hr>
+        </div>
+
+        <div id="email-form" class="right container-49_5">
+            <h2 class="display-on-big">Enviar email</h2>
+            <br class="display-on-small">
+            <div class="input-container">
+                <label for="name-input">Nombre y apellidos</label><br>
+                <input id="name-input" placeholder="">
             </div>
-            <div>
-                <label for="email-input"></label>
-                <textarea id="email-input" placeholder="Cuerpo del mensaje"></textarea>
+            <br>
+            <div class="input-container">
+                <label for="email-input">Cuerpo del mensaje</label><br>
+                <textarea id="email-input" placeholder=""></textarea>
             </div>
-            <script>
-                const textarea = document.getElementById('email-input');
-
-                textarea.addEventListener('input', function() {
-                    this.style.height = 'auto';
-                    this.style.height = this.scrollHeight + 'px';
-                });
-            </script>
-
             <div class="center no-select margin-top">
                 <button onclick="sendEmail()">
                     <i class="fa fa-envelope"></i>&nbsp;ENVIAR EMAIL
                 </button>
             </div>
             <p id="explanation">Enviar email a: estevezmurado@gmail.com</p>
+            <script>
+                function sendEmail() {
+                    var nameInput = document.getElementById('name-input');
+                    var emailInput = document.getElementById('email-input');
+                    var message = emailInput.value;
 
-            <div>
-                <h1>&nbsp;</h1>
-            </div>
+                    if (message.trim() !== '') {
+                        var subject = 'El Arte de la Ruina: ' + nameInput.value;
+                        window.location.href = 'mailto:estevezmurado@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(message);
+                    }
+                }
+            </script>
         </div>
 
     </div>
