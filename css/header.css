@@ -14,6 +14,14 @@
     font-size: 1rem;
 }
 
+.header-expanded .author {
+    font-size: 1.25rem;
+}
+
+.header-collapsed .author {
+    font-size: 1.25rem;
+}
+
 .header-collapsed {
     display: none;
     position: relative;
