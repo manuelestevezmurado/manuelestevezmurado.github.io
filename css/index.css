@@ -81,6 +81,7 @@
 }
 
 .index-galleries-section{
+    min-width: 40vh;
     height: 40vh;
     margin-bottom: 50px;
     flex: 0 0 22.5%;
@@ -119,9 +120,8 @@
     letter-spacing: 3px;
 }
 
-
-/* TABLETS */
-@media screen and (max-width: 1100px) and (min-width: 851px){
+/* WRAP */
+@media screen and (max-width: 1600px) and (min-width: 851px){
 
     .index-galleries-section {
         flex-basis: 47.5%;
@@ -132,6 +132,13 @@
         text-align: center;
         letter-spacing: 5px;
     }
+
+}
+
+/* TABLETS */
+@media screen and (max-width: 1100px) and (min-width: 851px){
+
+
 
 }
 
