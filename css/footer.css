@@ -1,12 +1,12 @@
 footer{
-    height: 5vh;
+    min-height: 15vh;
     width: 100%;
     background: black;
     color: white;
     text-align: center;
     justify-content: center;
     align-items: center;
-    display: flex;
+    display: block;
     margin-top: 25px;
 }
 
