@@ -157,6 +157,10 @@ button:hover{
     display: none;
 }
 
+.content-link{
+    text-decoration: underline;
+}
+
 /* TABLETS */
 @media screen and (max-width: 1100px) and (min-width: 851px){
 
