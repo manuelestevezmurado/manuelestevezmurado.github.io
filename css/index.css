@@ -132,19 +132,19 @@
 @media screen and (max-width: 850px) {
 
     .index-galleries-section {
+        /*
         flex-basis: 100%;
         width: 90vw;
         height: 60vw;
-/*
+        */
         flex-basis: 47.5%;
-        width: 45vw;
-        height: 45vw;
-*/
+        width: 40vw;
+        height: 40vw;
+
     }
 
     .index-galleries-section-text{
         text-align: center;
-        letter-spacing: 5px;
     }
 
 }
