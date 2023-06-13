@@ -8,6 +8,7 @@ footer{
     align-items: center;
     display: block;
     margin-top: 25px;
+    z-index: 50;
 }
 
 footer p {

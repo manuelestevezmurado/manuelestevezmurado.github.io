@@ -35,7 +35,6 @@ h1 {
 }
 h2 {
     font-size: 1.75rem;
-    letter-spacing: 3px;
 }
 h3 {
     font-size: 1rem;
@@ -178,7 +177,6 @@ button:hover{
 
 .fix-on-big{
     position: fixed;
-    top: calc(50vh - (0.33*(49.5vw - 12.5vw)));
 }
 
 /* TABLETS */

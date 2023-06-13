@@ -9,4 +9,9 @@ $(document).ready(function () {
         swipe: false,
         pauseOnFocus: false,
     });
+
+    // Evita que la reproduccion se pare al hacer clic
+    slick.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+        slick.slickPlay();
+    });
 });
