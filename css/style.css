@@ -161,6 +161,16 @@ button:hover{
     text-decoration: underline;
 }
 
+.justify-and-hyphens{
+    text-align: justify;
+    hyphens: auto;
+}
+
+.center-and-hyphens{
+    text-align: center;
+    hyphens: auto;
+}
+
 /* TABLETS */
 @media screen and (max-width: 1100px) and (min-width: 851px){
 
