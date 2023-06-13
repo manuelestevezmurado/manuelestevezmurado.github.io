@@ -124,7 +124,9 @@
 /* TABLETS */
 @media screen and (max-width: 1100px) and (min-width: 851px){
 
-
+    .index-galleries {
+        padding: 50px 25px 0 25px;
+    }
 
 }
 
@@ -140,12 +142,16 @@
         flex-basis: 47.5%;
         width: 40vw;
         height: 40vw;
-
+        margin-bottom: 25px;
     }
 
     .index-galleries-section-text{
         text-align: center;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .index-galleries {
+        padding: 50px 25px 0 25px;
     }
 
 }
