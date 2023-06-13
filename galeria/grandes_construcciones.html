@@ -130,6 +130,8 @@
     <div id="gallery-wrap" class="gallery-wrap"></div>
     <div id="modal" class="modal">
       <span class="close" onclick="document.getElementById('modal').style.display='none'">&#10005;</span>
+      <span class="modal-arrow modal-arrow-left"><i class="fa fa-angle-left"></i></span>
+      <span class="modal-arrow modal-arrow-right"><i class="fa fa-angle-right"></i></span>
       <img class="modal-content" id="modalImage" alt="" src="" loading="eager">
       <div id="caption"></div>
     </div>
@@ -185,16 +187,9 @@
           child.alt = "";
           child.loading = "lazy";
 
-          child.onclick = (function(index) {
-            return function() {
-              let modal = document.getElementById("modal");
-              let modalImg = document.getElementById("modalImage");
-              let captionText = document.getElementById("caption");
-              modal.style.display = "block";
-              modalImg.src = originalImages[index];
-              captionText.innerHTML = child.alt;
-            };
-          })(i);
+          child.onclick = function() {
+            openModal(i);
+          };
         } else {
           child.style.height = "0";
           child.style.width = "33%";
@@ -224,6 +219,31 @@
       span.onclick = function() {
         modal.style.display = "none";
       };
+
+      function openModal(index) {
+        const modal = document.getElementById("modal");
+        const modalImg = document.getElementById("modalImage");
+        const captionText = document.getElementById("caption");
+
+        modal.style.display = "block";
+        modalImg.src = originalImages[index];
+        captionText.innerHTML = ""; // Agrega texto de la imagen si es necesario
+
+        // ARROWS MANAGEMENT
+        const modalArrowLeft = document.querySelector(".modal-arrow-left");
+        const modalArrowRight = document.querySelector(".modal-arrow-right");
+
+        modalArrowLeft.addEventListener("click", function () {
+          index = (index - 1 + originalImages.length) % originalImages.length;
+          modalImg.src = originalImages[index];
+        });
+
+        modalArrowRight.addEventListener("click", function () {
+          index = (index + 1) % originalImages.length;
+          modalImg.src = originalImages[index];
+        });
+      }
+
     </script>
 
     <div style="width: 100%; text-align: center">
