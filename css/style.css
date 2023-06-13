@@ -171,6 +171,11 @@ button:hover{
     hyphens: auto;
 }
 
+.fix-on-big{
+    position: fixed;
+    top: calc(50vh - (0.33*(49.5vw - 12.5vw)));
+}
+
 /* TABLETS */
 @media screen and (max-width: 1100px) and (min-width: 851px){
 
@@ -209,6 +214,11 @@ button:hover{
 
     .show-on-small{
         display: block;
+    }
+
+    .fix-on-big{
+        position: static;
+        top: 0;
     }
 
 }
@@ -253,6 +263,10 @@ button:hover{
 
     .show-on-small{
         display: block;
+    }
+    .fix-on-big{
+        position: static;
+        top: 0;
     }
 
 }
