@@ -19,6 +19,9 @@
 /* TABLETS */
 @media screen and (max-width: 1100px) and (min-width: 851px){
 
+    .book-container{
+        height: 50vh;
+    }
 
 }
 
@@ -34,7 +37,7 @@
     }
 
     .book-container{
-        height: 95vh;
+        height: 50vh;
     }
 
 }
