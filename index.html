@@ -44,7 +44,28 @@
 
     <div class="index-home body-section">
 
-        <!--<img id="bg-img" src="assets/drone_view_frame_0.webp" alt="">-->
+        <div id="bg-carousel"></div>
+        <script>
+            const images = [
+                'url(assets/thumbnail/geometrica/DSCF9206.webp)',
+                'url(assets/thumbnail/graffitis/DSCF3532.webp)',
+                'url(assets/thumbnail/interiores/DSCF0311-HDR.webp)',
+                'url(assets/thumbnail/texturas/DSCF1296.webp)',
+                'url(assets/index/DJI_0169_crop.webp)',
+            ];
+            function changeBackground() {
+                const div = document.getElementById('bg-carousel');
+                let i = 0;
+                setInterval(() => {
+                    div.style.backgroundImage = images[i];
+                    i = (i + 1) % images.length;
+                }, 4000);
+            }
+
+            window.onload = () => {
+                changeBackground();
+            };
+        </script>
         <video id="bg-video" autoplay loop muted>
             <source src="assets/drone_view_1080_16-9.mp4" type="video/mp4">
             <source src="assets/drone_view_1080_16-9.webm" type="video/webm">

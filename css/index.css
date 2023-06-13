@@ -32,13 +32,8 @@
     min-height: 100%;
 }
 
-#bg-img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100vw;
-    min-height: 100%;
+#bg-carousel {
+    display: none;
 }
 
 #fotografias{
@@ -152,6 +147,23 @@
 
     .index-galleries {
         padding: 50px 25px 0 25px;
+    }
+
+    #bg-video {
+        display: none;
+    }
+
+    #bg-carousel {
+        position: absolute;
+        z-index: 0;
+        display: block;
+        background-image: url('../assets/index/DJI_0169_crop.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: background-image 1s ease-in-out;
+        min-width: 100vw;
+        height: 100vh;
+        background-position: center center;
     }
 
 }
