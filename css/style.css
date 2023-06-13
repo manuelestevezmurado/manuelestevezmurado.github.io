@@ -21,8 +21,8 @@ body {
     flex-direction: column;
     margin: 0;
     padding: 0;
-    color: white;                       /* TODO: EDITAR */
-    background-color: #14110f;          /* TODO: EDITAR */
+    color: white;
+    background-color: #14110f;
 }
 
 /* 5VH DUE TO FOOTER AND 25PX OF FOOTER MARGIN-TOP */
@@ -44,7 +44,7 @@ p {
 }
 
 a {
-    color: white;                       /* TODO: EDITAR */
+    color: white;
     text-decoration: none;
     transition: 0.1s ease-in-out;
 }
@@ -114,10 +114,10 @@ hr {
 }
 
 button{
-    border: 1px solid white;           /* TODO: EDITAR */
+    border: 1px solid white;
     border-radius: 5px;
     background: transparent;
-    color: white;                       /* TODO: EDITAR */
+    color: white;
     font-size: 1rem;
     font-weight: bold;
     padding: 7px;
@@ -127,7 +127,7 @@ button{
 button:hover{
     cursor: pointer;
     background: white;
-    color: #14110f;                       /* TODO: EDITAR */
+    color: #14110f;
     padding: 7px;
 }
 
