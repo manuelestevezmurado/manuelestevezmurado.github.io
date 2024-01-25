@@ -5,8 +5,8 @@
 @import "footer.css";
 
 @font-face {
-    font-family: 'BerlingskeSans';
-    src: url('../fonts/Berlingske_Sans_Regular.ttf') format('truetype');
+    font-family: 'AileronRegular';
+    src: url('../fonts/Aileron-Regular.ttf') format('truetype');
 }
 
 html {
@@ -15,7 +15,7 @@ html {
 }
 
 body {
-    font-family: 'BerlingskeSans', Helvetica, sans-serif;
+    font-family: 'AileronRegular', Helvetica, sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
